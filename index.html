@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./css/desktop.css">
 </head>
 <body class="page">
     <header>
@@ -17,9 +20,15 @@
             <nav class="site-nav">
                 <a href="./index.html" class="logo link"><span class="logo-prefix">Web</span>Studio</a>
                 <ul class="nav-options list">
-                    <li class="nav-item"><a href="./index.html" class="current link">Studio</a></li>
-                    <li class="nav-item"><a href="./portfolio.html" class="link">Portfolio</a></li>
-                    <li class="nav-item"><a href="" class="link">Contacts</a></li>
+                    <li class="nav-item">
+                        <a href="./index.html" class="current link">Studio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./portfolio.html" class="link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="link">Contacts</a>
+                    </li>
                 </ul>
             </nav>
             <ul class="contacts list">
@@ -28,6 +37,61 @@
                 </li>
                 <li class="header-contact">
                     <a href="tel:+380961111111" class="link">+11 (000) 111-11-11</a>
+                </li>
+            </ul>
+            <button type="button" class="open-mob" data-menu-open>
+                <svg width="32" height="22">
+                    <use href="./images/all-icons.svg#burger-menu"></use>
+                </svg>
+            </button>
+       </div>
+       <div class="mob-menu is-hidden" data-menu> 
+            <button type="button" class="close-mob close" data-menu-close>
+                <svg class="icon" width="8" height="8">
+                    <use href="./images/all-icons.svg#cross"></use>
+                </svg>
+            </button>
+            <ul class="mob-nav list">
+                <li class="mob-nav-item">
+                    <a href="./index.html" class="current link">Studio</a>
+                </li>
+                <li class="mob-nav-item">
+                    <a href="./portfolio.html" class="link">Portfolio</a>
+                </li>
+                <li class="mob-nav-item">
+                    <a href="" class="link">Contacts</a>
+                </li>
+            </ul>
+            <a href="tel:+380961111111" class="mob-header-tel link">+11 (000) 111-11-11</a>
+            <a href="mailto:info@devstudio.com" class="mob-header-mail link">info@devstudio.com</a>
+            <ul class="mob-networks list">
+                <li class="mob-networks-item">
+                    <a href="/" class="link">
+                        <svg class="icon" width="24" height="24">
+                            <use href="./images/all-icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mob-networks-item">
+                    <a href="/" class="link">
+                        <svg class="icon" width="24" height="24">
+                            <use href="./images/all-icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mob-networks-item">
+                    <a href="/" class="link">
+                        <svg class="icon" width="24" height="24">
+                            <use href="./images/all-icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="mob-networks-item">
+                    <a href="/" class="link">
+                        <svg class="icon" width="24" height="24">
+                            <use href="./images/all-icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
        </div>
@@ -88,17 +152,35 @@
                 <h2 class="section-heading">What are we doing</h2>
                 <ul class="list">
                     <li class="item">
-                        <img src="./images/main-page/what-we-do-section/what-we-do-1.jpg" alt="Analytical diagrams on the computer screen"
-                            width="370" height="295">
+                        <img 
+                            src="./images/main-page/what-we-do-section/what-we-do-1.jpg" 
+                            alt="Analytical diagrams on the computer screen"
+                            srcset="
+                                ./images/main-page/what-we-do-section/what-we-do-1.jpg 1x,
+                                ./images/main-page/what-we-do-section/what-we-do-1-2x.jpg 2x
+                            "
+                            width="370" 
+                            height="295">
                     </li>
                     <li class="item">
                         <img src="./images/main-page/what-we-do-section/what-we-do-2.jpg"
-                            alt="Versions of the mobile application view" width="370"
+                            alt="Versions of the mobile application view" 
+                            srcset="
+                                ./images/main-page/what-we-do-section/what-we-do-2.jpg 1x,
+                                ./images/main-page/what-we-do-section/what-we-do-2-2x.jpg 2x
+                            "
+                            width="370" 
                             height="295">
                     </li>
                     <li class="item">
                         <img src="./images/main-page/what-we-do-section/what-we-do-3.jpg"
-                            alt="Demonstration of the developed design on a phone" width="370" height="295">
+                            alt="Demonstration of the developed design on a phone" 
+                            srcset="
+                                ./images/main-page/what-we-do-section/what-we-do-3.jpg 1x,
+                                ./images/main-page/what-we-do-section/what-we-do-3-2x.jpg 2x
+                            "
+                            width="370" 
+                            height="295">
                     </li>
                 </ul>
             </div>
@@ -108,7 +190,14 @@
                 <h2 class="section-heading">Our Team</h2>
                 <ul class="list">
                     <li class="team-card">
-                        <img src="./images/main-page/our-team-section/mark.jpg" alt="Mark's photo" width="270" height="260">
+                        <img src="./images/main-page/our-team-section/mark.jpg" 
+                        alt="Mark's photo" 
+                        srcset="
+                                ./images/main-page/our-team-section/mark.jpg 1x,
+                                ./images/main-page/our-team-section/mark-2x.jpg 2x
+                            "
+                            width="264" 
+                            height="260">
                         <div class="card-info">
                             <h3 class="team-name">Mark Guerrero</h3>
                             <p class="team-position">Product Designer</p>
@@ -147,7 +236,14 @@
                         </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/main-page/our-team-section/tom.jpg" alt="Tom's photo" width="270" height="260">
+                        <img src="./images/main-page/our-team-section/tom.jpg" 
+                        alt="Tom's photo" 
+                        srcset="
+                                ./images/main-page/our-team-section/tom.jpg 1x,
+                                ./images/main-page/our-team-section/tom-2x.jpg 2x
+                            "
+                            width="264" 
+                            height="260">
                         <div class="card-info">
                             <h3 class="team-name">Tom Ford</h3>
                             <p class="team-position">Frontend Developer</p>
@@ -187,7 +283,14 @@
                         
                     </li>
                     <li class="team-card">
-                        <img src="./images/main-page/our-team-section/camila.jpg" alt="Camila's photo" width="270" height="260">
+                        <img src="./images/main-page/our-team-section/camila.jpg" 
+                        alt="Camila's photo" 
+                        srcset="
+                                ./images/main-page/our-team-section/camila.jpg 1x,
+                                ./images/main-page/our-team-section/camila-2x.jpg 2x
+                            "
+                            width="264" 
+                            height="260">
                        <div class="card-info">
                             <h3 class="team-name">Camila Garcia</h3>
                             <p class="team-position">Marketing</p>
@@ -226,7 +329,14 @@
                        </div>
                     </li>
                     <li class="team-card">
-                        <img src="./images/main-page/our-team-section/daniel.jpg" alt="Daniel's photo" width="270" height="260">
+                        <img src="./images/main-page/our-team-section/daniel.jpg" 
+                        alt="Daniel's photo"
+                        srcset="
+                                ./images/main-page/our-team-section/daniel.jpg 1x,
+                                ./images/main-page/our-team-section/daniel-2x.jpg 2x
+                            "
+                            width="264" 
+                            height="260">
                        <div class="card-info">
                             <h3 class="team-name">Daniel Wilson</h3>
                             <p class="team-position">UI Designer</p>
@@ -268,7 +378,7 @@
             </div>
         </section>
         <section class="section">
-            <div class="container">
+            <div class="clients-container container">
                 <h1 class="section-heading">Customers</h1>
                 <ul class="clients list">
                     <li class="item">
@@ -375,14 +485,14 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close" data-modal-close>
+            <button type="button" class="modal-close close" data-modal-close>
                 <svg class="icon" width="8" height="8">
                     <use href="./images/all-icons.svg#cross"></use>
                 </svg>
             </button>
             <p class="modal-heading">Leave your contacts and we will call you back</p>
             <form>
-               
+            
                 <label class="form-field">
                     <span class="label-text">Name</span>
                     <span class="input-with-icon">
@@ -402,7 +512,7 @@
                         </svg>
                     </span>
                 </label>
-              
+            
                 <label class="form-field">
                     <span class="label-text">Email</span>
                     <span class="input-with-icon">
@@ -432,6 +542,10 @@
             </form>
         </div>
     </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

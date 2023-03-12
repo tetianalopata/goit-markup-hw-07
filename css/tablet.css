@@ -1,0 +1,265 @@
+@media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 768px;
+    }
+
+    /* logo */
+
+    .site-nav .logo {
+        margin-right: 120px;
+    }
+
+    /* header */
+
+    .container.header {
+        max-width: 100%;
+        justify-content: unset;
+    }
+
+    .open-mob,
+    .mob-menu {
+        display: none;
+    }
+
+    .header,
+    .site-nav,
+    .nav-options,
+    .contacts {
+        display: flex;
+    }
+
+    .header,
+    .site-nav {
+        align-items: center;
+    }
+
+    .site-nav {
+        margin-right: auto;
+    }
+
+    .nav-item {
+        font-weight: 500;
+    }
+
+    .nav-item .link {
+        display: block;
+        position: relative;
+
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .nav-options {
+        gap: 40px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-item {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+    }
+
+    .header-contact {
+        font-size: 12px;
+        line-height: calc(14 / 12);
+    }
+
+    .current {
+        color: var(--pressed-state)
+    }
+
+    .current::after {
+        display: block;
+        position: absolute;
+        content: "";
+
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--pressed-state);
+    }
+
+    /* hero */
+
+    .hero {
+        background-image: linear-gradient(to right,
+                var(--hero-ovrlay-color),
+                var(--hero-ovrlay-color)),
+            url('../images/main-page/hero-tab-1x.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+        background-image: linear-gradient(to right,
+                var(--hero-ovrlay-color),
+                var(--hero-ovrlay-color)),
+            url('../images/main-page/hero-tab-2x.jpg');
+    }
+    }
+
+    .hero-heading {
+        margin-bottom: 36px;
+        font-size: 56px;
+        line-height: calc(60 / 56);
+        max-width: 494px;
+    }
+
+    /* advantages */
+
+    .advantages .list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+
+    .advantages .item {
+        width: 356px;
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .advantages-heading {
+        font-size: 36px;
+        line-height: calc(40 / 36);
+        text-align: left;
+    }
+
+    .advantages-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: calc(24 / 16);
+
+        color: var(--secondary-text-color);
+    }
+
+    .advantages .icon-container {
+        display: none;
+    }
+
+   /* team */
+
+   .team .container {
+       max-width: 584px;
+   }
+
+   .team .list {
+       gap: 72px 24px;
+   }
+
+   /* clients */
+
+   .clients {
+    gap: 72px 24px;
+   }
+
+   .clients .link {
+       width: 168px;
+   }
+
+   .clients .icon {
+       width: 104px;
+       height: 56px;
+       fill: currentColor;
+   }
+
+   /* projects */
+
+   .portfolio-section {
+       padding: 64px 0px 96px 0px;
+   }
+
+    /* filters */
+
+    .filter {
+        gap: 24px 16px;
+        margin-bottom: 64px;
+        justify-content: center;
+    }
+
+    .filter-option {
+        padding: 12px 24px;
+        min-width: 69px;
+
+        transition: box-shadow var(--main-transition-dur-and-func);
+    }
+
+    .filter-option:hover,
+    .filter-option:focus {
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);    
+    }
+
+    /* project cards */
+
+    .projects {
+        gap: 72px 24px;
+    }
+
+    .projects .item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+   /* footer */
+
+   .footer .container {
+        max-width: 584px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 72px 24px;
+        margin: 0px 108px;
+        padding: 0px 16px;
+        
+   }
+
+   .footer-heading {
+       text-align: left;
+   }
+
+   .footer-info {
+       max-width: 264px;
+       margin: 0px;
+       justify-content: left;
+   }
+
+   .join-networks {
+    margin: 0px;
+    justify-content: left;
+   }
+
+   .newsletter {
+    margin: 0px;
+   }
+
+   .footer .form {
+       flex-direction: row;
+       gap: 24px;
+       margin: 0px;
+   }
+
+   .footer-input {
+       width: 264px;
+       margin: 0px;
+   }
+
+   /* modal */
+
+   .modal {
+        max-width: 408px;
+        padding: 72px 24px 24px 24px;
+   }
+
+
+
+}

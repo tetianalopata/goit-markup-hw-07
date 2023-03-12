@@ -1,0 +1,202 @@
+@media screen and (min-width: 1440px) {
+
+    .container {
+        max-width: 1160px;
+    }
+
+    .section {
+        padding: 120px 0px;
+    }
+
+    /* header */
+
+        .container.header {
+            max-width: 1160px;
+        }
+
+    .contacts {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .header-contact {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+    }
+
+    /* hero */
+
+    .hero {
+        max-width: 1440px;
+
+        background-image: linear-gradient(to right,
+                var(--hero-ovrlay-color),
+                var(--hero-ovrlay-color)),
+            url('../images/main-page/hero-dsk-1x.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(to right,
+                    var(--hero-ovrlay-color),
+                    var(--hero-ovrlay-color)),
+                url('../images/main-page/hero-dsk-2x.jpg');
+        }
+    }
+
+    .hero-heading {
+        margin-bottom: 48px;
+    }
+
+    /* advantages */
+
+    .advantages {
+        padding-bottom: 0px;
+    }
+
+    .advantages .list {
+        display: flex;
+        gap: 24px;
+    }
+
+
+    .advantages .item {
+        margin: 0;
+        width: 264px;
+        flex-basis: calc((100% - 3 * 24px) / 4);
+    }
+
+    .advantages-heading {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: calc(24 / 20);
+        margin-bottom: 8px;
+    }
+
+    .advantages-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(24 / 16);
+    }
+
+    .advantages .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 120px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+
+        background-color: var(--light);
+    }
+
+    /* what we do */
+
+    .what-we-do {
+        display: block;
+    }
+
+    .what-we-do .list {
+        display: flex;
+        gap: 24px;
+    }
+ 
+    .what-we-do .item {
+        flex-basis: calc((100% - 2 * 24px) / 3);
+    } 
+
+    /* team */
+
+    .team .container {
+        max-width: 1160px;
+        margin: auto;
+    }
+
+    /* projects */
+
+    .portfolio-section {
+        padding: 100px 156px 120px 156px;
+    }
+
+    /* filters */
+
+    .filter {
+        margin-bottom: 72px;
+    }
+
+    /* project cards */
+
+    .projects {
+        gap: 48px 24px;
+    }
+
+    .projects .item {
+        flex-basis: calc((100% - 2 * var(--vertical-card-set-gap)) / 3);
+    }
+
+    .card-thumb {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .overlay {
+        display: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translatey(101%);
+
+        width: 100%;
+        height: 100%;
+        padding: 40px 32px;
+
+        background-color: var(--accent-color);
+        transition: var(--main-transition-dur-and-func);
+    }
+
+    .overlay-description {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+        color: var(--light);
+    }
+
+    .projects .link:hover .overlay,
+    .projects .link:focus .overlay {
+        transform: translatey(0);
+    }
+
+    /* footer */
+
+    .footer {
+        padding: 100px 0px;
+    }
+
+    .footer .container {
+        max-width: 1160px;
+        margin: auto;
+        gap: 0px;
+    }
+
+    .footer-info {
+        margin-right: 120px;
+    }
+
+    .join-networks {
+        margin-right: 80px;
+    }
+    
+    .footer .form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* modal */
+    
+    .form-comment {
+        margin-bottom: 18px;
+    }
+    
+}
